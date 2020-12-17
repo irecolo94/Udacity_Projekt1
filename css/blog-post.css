@@ -2,14 +2,55 @@
 
 .grid-pb {
   display: grid;
-  grid-gap: 2%;
+  grid-column-gap: 2%;
+  grid-row-gap: 0.5%;
   grid-template-columns: auto 20%;
-  grid-template-rows: auto 1fr 1fr 1fr;
+  grid-template-rows: 1.5% 1.5% auto 1fr 1fr 1fr;
   grid-template-areas:
+  "head head"
+  "nav nav"
   "post about"
   "post about"
   "post follow"
   "footer footer"
+}
+
+.header {
+  grid-area: head;
+  display: flex;
+  flex-direction: row;
+  background-color: #FDF0E3;
+  align-items: center
+}
+
+#title_post {
+  font-size: 1em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#searchbar {
+  margin-left: auto;
+}
+
+.navbar {
+  grid-area: nav;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 2%;
+  background-color: #FDF0E3;
+}
+
+#nav_item {
+  margin-right: 4em;
+  color: #E98305;
+  /* color: black; */
+}
+
+#nav_link {
+  color: #E98305;
+  text-decoration: none;
 }
 
 .main {

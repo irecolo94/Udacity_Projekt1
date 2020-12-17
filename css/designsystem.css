@@ -4,14 +4,16 @@
    .colors,
    p,
    a,
-   #searchbar {
+   #searchbar,
+   #link {
      font-family: 'Cormorant Garamond', serif;
    }
 
    h3,
    #button,
    h2,
-   h4 {
+   h4,
+   #link_cap {
      font-family: 'Amatic SC', cursive;
      text-transform: uppercase;
    }
@@ -86,6 +88,7 @@
      border: 2px solid #00A991;
      width: 10rem;
    }
-   #link {
+   #link,
+   #link_cap {
      color: #E98305;
    }
