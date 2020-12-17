@@ -15,11 +15,13 @@
 .main {
   grid-area: post;
   background-color: #F5F7F9;
+  padding: 1em;
 }
 
 .about {
   grid-area: about;
   background-color: #EBF4EC;
+  padding: 1em;
 }
 
 .about_flex {
@@ -33,6 +35,7 @@
   grid-area: follow;
   background-color: #FDF0E3;
   color: #E98305;
+  text-align: center;
 }
 
 .social {
@@ -56,8 +59,8 @@
 }
 
 #Me {
-  width: 10rem;
-  height: 10rem;
+  max-width: 10rem;
+  max-height: 10rem;
   border-radius: 100px;
   margin-left: 2.5rem;
   margin-right: 2.5rem;

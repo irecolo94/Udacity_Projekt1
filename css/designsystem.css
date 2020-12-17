@@ -1,14 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
    .typo,
-    h3,
-    h1,
-    h2,
    .colors,
    p,
    a,
-   #button {
+   #searchbar {
      font-family: 'Cormorant Garamond', serif;
    }
+
+   h3,
+   #button,
+   h2,
+   h4 {
+     font-family: 'Amatic SC', cursive;
+     text-transform: uppercase;
+   }
+
+   h4 {
+     font-size: 1.4em;
+   }
+
+   h2 {
+     font-size: 3em;
+   }
+   h3 {
+     font-size: 2em;
+ }
+
+   h1 {
+     font-family: 'Amatic SC', cursive;
+     text-transform: uppercase;
+     font-size: 4em;
+   }
+
    p {
      font-size: 1.2rem;
    }
@@ -52,10 +76,10 @@
      background-color: #E98305;
    }
    #button {
-     background-color: #EBF4EC;
+     background-color: #F5F7F9;
      color: #00A991;
-     padding-top: 2%;
-     padding-bottom: 2%;
+/*     padding-top: 2%;
+     padding-bottom: 2%; */
      font-weight: bold;
      font-size: 1.2em;
      border-radius: 10px;

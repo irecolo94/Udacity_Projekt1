@@ -8,32 +8,64 @@
   <body>
     <div class="grid-container">
       <div class="header">
-        <h1>MY FIRST BLOG</h1>
+        <div class="title">
+          <hr>
+          <h1 id="title">IRENE'S FIRST BLOG</h1>
+          <hr>
+        </div>
          <input id="searchbar" type="text" placeholder="Search..">
         </div>
-      <div class="content">
+      <div class="navbar">
+        <a href="#cont" id="nav_link"><h4 id="nav_item">Content</h4></a>
+        <a href="#form" id="nav_link"><h4 id="nav_item">Contact</h4></a>
+        <a href="designsystem.html" id="nav_link"><h4 id="nav_item">Design System</h4></a>
+      </div>
+      <div class="content" id="cont">
         <!--image--><!--button!-->
         <div id="post1">
-          <h3>A first (and last?) approach to sketchnoting</h3>
-          <p>I would have never thought I had the time to think about and implement a personal content for this blog. Why would you bother writing a blog then, are you probably asking yourself. Actually, this blog is supposed to be a submission, a mere exercise. I was pretty looking forward to a page full of lore ipsum...<a id="link" href="blog-post.html">read more</a></p>
-
+          <div class="post1_textimg">
+            <div class="post1_text">
+              <h3>A first (and last?) approach to sketchnoting</h3>
+              <p id="pitalic">By Irene
+                <br>
+                December 20, 2020
+              </p>
+              <p>I would have never thought I had the time to think about and implement a personal content for this blog. Why would you bother writing a blog then, are you probably asking yourself. Actually, this blog is supposed to be a submission, a mere exercise. I was pretty looking forward to a page full of <i>lore ipsum</i>...<a id="link" href="blog-post.html">read more</a></p>
+            </div>
+            <div class="post1_img">
+              <img src="img/Sketchnote_neu.png" id="img_small">
+            </div>
+          </div>
         </div>
         <div id="post2">
           <h3>The next post</h3>
-          <p>This will be my next post! <a href="">read more</a></p>
-
+          <p id="pitalic">By Irene
+          <br>
+          ?, 2021
+          </p>
+          <p>This will be my next post! <a href="notfound.html" id="link">read more</a></p>
+        </div>
+        <div id="post3">
+          <h3>The next post after the next post</h3>
+          <p id="pitalic">By the_special_guest
+          <br>
+          ?, 2021
+          </p>
+          <p>This will be the post of a special guest! <a href="notfound.html" id="link">read more</a></p>
         </div>
       </div>
-      <form>
-        <h3>Do you have any quesitons? <br> Don't hesitate to contact me!</h3>
-        <label for="fname">Your name:</label><br>
-        <input type="text" id="fname" name="fname"><br>
-        <label for="email">Your E-mail:</label><br>
-        <input type="text" id="email" name="email"><br>
-        <label for="message">Your Text:</label><br>
-        <input type="text" id="message" name="message"><br><br>
-        <button type="button" id="button">submit</button>
-      </form>
+      <div class="form" id="form">
+        <form>
+          <h4>Do you have any quesitons? <br> Don't hesitate to contact me!</h4>
+          <label for="fname">Your name:</label>
+          <input type="text" id="fname" name="fname"><br>
+          <label for="email">Your E-mail:</label>
+          <input type="text" id="email" name="email"><br>
+          <label for="message">Your Text:</label>
+          <input type="text" id="message" name="message"><br>
+          <button type="button" id="button">submit</button>
+        </form>
+      </div>
       <div class="footer">
         <p>Udacity nanodegree "Front End Web Developement" - first submission</p>
         <a href="designsystem.html">Design System</a>
