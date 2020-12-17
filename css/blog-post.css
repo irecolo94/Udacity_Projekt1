@@ -1,0 +1,68 @@
+@import "designsystem.css";
+
+.grid-pb {
+  display: grid;
+  grid-gap: 2%;
+  grid-template-columns: auto 20%;
+  grid-template-rows: auto 1fr 1fr 1fr;
+  grid-template-areas:
+  "post about"
+  "post about"
+  "post follow"
+  "footer footer"
+}
+
+.main {
+  grid-area: post;
+  background-color: #F5F7F9;
+}
+
+.about {
+  grid-area: about;
+  background-color: #EBF4EC;
+}
+
+.about_flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.follow {
+  grid-area: follow;
+  background-color: #FDF0E3;
+  color: #E98305;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#social_icon {
+  height: 2rem;
+  width: 2rem;
+  padding: 0.5rem;
+  margin: 0.2rem;
+  border: 1px solid #E98305;
+}
+
+#Sketchnote {
+  height: 100%;
+  width: 100%;
+  border: 1px solid grey;
+}
+
+#Me {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100px;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+#fn1 {
+  font-size: 0.9em;
+}

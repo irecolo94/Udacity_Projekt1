@@ -20,12 +20,16 @@
   grid-area: header;
   /*grid-column:1/4;
   grid-row: 1;*/
-  display: grid;
-  grid-template-columns: 3fr 1fr;
+  display: flex;
+  flex-direction: row;
+  /*grid-template-columns: 3fr 1fr;*/
   background-color: #FDF0E3;
   align-items: center;
 }
 
+#searchbar {
+  margin-left: auto;
+}
 
 .content {
   grid-area: content;

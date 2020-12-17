@@ -3,34 +3,55 @@
   <head>
     <meta charset="utf-8">
     <title>blog post</title>
+    <link href="css/blog-post.css" type="text/css" rel="stylesheet" />
   </head>
   <body>
-    <div class="main">
-      <h2>De bello gallico</h2>
-      <p>(1) Gallia est omnis divisa in partes tres, quarum unam incolunt Belgae, aliam Aquitani, tertiam, qui ipsorum lingua Celtae, nostra Galli appellantur. 	(1) Gallien ist insgesamt in drei Teile geteilt, deren einen die Belger bewohnen, den anderen die Aquitaner, den dritten jene, die in eigener Sprache „Kelten“ genannt werden, in unserer Gallier.
-      (2) Hi omnes lingua, institutis, legibus inter se differunt. 	(2) Diese alle unterscheiden sich in Sprache, Gewohnheiten und Gesetzen.
-      (3) Gallos ab Aquitanis Garunna flumen, a Belgis Matrona et Sequana dividit. 	(3) Der Fluss Garonne trennt die Gallier von den Aquitanern, die Marne und die Seine trennt die Gallier von den Belgern.
-      (4) Horum omnium fortissimi sunt Belgae, propterea quod a cultu atque humanitate provinciae longissime absunt, minimeque ad eos mercatores saepe commeant atque ea quae ad effeminandos animos pertinent important, proximique sunt Germanis, qui trans Rhenum incolunt, quibuscum continenter bellum gerunt. 	(4) Die Tapfersten all dieser sind die Belger, und zwar deswegen, weil sie von der menschlichen Zivilisation der [römischen] Provinz am weitesten entfernt sind, sehr selten Kaufleute zu ihnen kommen und das einführen, was zur Verweichlichung der Gemüter führt, und weil sie den Germanen, die jenseits des Rheines leben und mit denen sie ständig Krieg führen, sehr nahe sind.</p>
-      <figure id="asterix_fight">
-        <img src="img/asterix_fight.jpg">
-        <figcaption>Asterix is at war with the romans</figcaption>
-      </figure>
-      <h3>Part II</h3>
-      <p>(5) Qua de causa Helvetii quoque reliquos Gallos virtute praecedunt, quod fere cotidianis proeliis cum Germanis contendunt, cum aut suis finibus eos prohibent aut ipsi in eorum finibus bellum gerunt. 	(5) Aus diesem Grund übertreffen auch die Helvetier die übrigen Gallier an Tapferkeit, weil sie sich in fast täglichen Gefechten mit den Germanen messen, wobei sie diese entweder von ihrem Gebiet fernhalten oder selbst in deren Gebiet kämpfen.
-      (6) Eorum una pars, quam Gallos obtinere dictum est, initium capit a flumine Rhodano, continetur Garunna flumine, Oceano, finibus Belgarum, attingit etiam ab Sequanis et Helvetiis flumen Rhenum, vergit ad septentriones. 	(6) Ein Teil davon, den, wie gesagt, die Gallier bewohnen, findet seinen Ursprung an der Rhône, folgt dem Lauf der Garonne, der [Küste des] Ozeans und den Grenzen der Belger; er erstreckt sich von den [Gebieten der] Sequaner und Helvetier hin bis zum Rhein nach Norden zu.
-      (7) Belgae ab extremis Galliae finibus oriuntur, pertinent ad inferiorem partem fluminis Rheni, spectant in septentrionem et orientem solem. 	(7) Das Gebiet der Belger beginnt an den fernsten Grenzen Galliens, erstreckt sich bis an den Niederrhein (wörtl.: unteren Teil des Rheins) und liegt nach Nordosten.
-      (8) Aquitania a Garunna flumine ad Pyrenaeos montes et eam partem Oceani quae est ad Hispaniam pertinet; spectat inter occasum solis et septentriones. </p>
-    </div>
-    <div class="about">
-      <h3>About</h3>
-      <p>Gaius Julius Caesar[a] (/ˈsiːzər/ SEE-zər, Latin: [ˈɡaːi.ʊs ˈjuːli.ʊs ˈkae̯.sar]; 12 July 100 BC – 15 March 44 BC) was a Roman general and statesman who played a critical role in the events that led to the demise of the Roman Republic and the rise of the Roman Empire.</p>
-      <img src="img/caesar.jpg" id="Caesar">
-    </div>
-     <div class="follow">
-       <a href="#"><img src="img/facebook.svg"></a>
-       <a href="#"><img src="img/twitter.svg"></a>
-     </div>
+    <div class="grid-pb">
+      <div class="main">
+        <h2>A first (and last?) approach to sketchnoting</h2>
+        <p>I would have never thought I had the time to think about and implement a personal content for this blog. Why would you bother writing a blog then, are you probably asking yourself. Actually, this blog is supposed to be a submission, a mere exercise. I was pretty looking forward to a page full of lore ipsum, which always reminds me of my Latin classes at school (not that I enjoyed translating Latin, but the time at high school was a pretty good one). Moreover it sounds epic enough to fit my taste. </p>
+        <p>And then, a couple of days ago, I attended a small conference about the use of sketchnotes in the IT, held by Lisa Moritz. Who is she?, are you probably asking yourself. Nope, you’re not supposed to know her. She is a german developer who is having quite a lot of success in Germany lately because of her idea of applying simple and easy-to-imitate sketchnotes to tech topics. If you are interested (and, most of all, know German) check out her website:
+        <a id="link"href="https://www.sketchnotes.tech/about/">https://www.sketchnotes.tech/about/</a> . If you don’t know German, you can check out also <a id="link"href="https://rohdesign.com/">https://rohdesign.com/</a>. </p>
+        <p>You are probably asking yourself what the point of this all is. During her speech, Lisa stretched out that:</p>
+          <ul class="typo" id="list">
+          <li>anyone can quickly make some sketchnotes</li>
+          <li>they help a lot in remembering</li>
+          <li>they are also a lot of fun</li>
+          </ul>
+        <p>Clearly, the idea has potential.
+        I started thinking. If she’s right, then I could also do some sketchnoting about HTML and CSS!
+        It would have made sense to start with something simple. Sketchnoting the developement strategy for this blog, as suggested by the Udacity tutors, would have fit the purpose. <sup><a href="#fn1" id="link" id="r1">[1]</a></sup> And ta daa! This is what I’ve come up with:
+        </p>
+        <figure id="sketchnotes">
+          <img src="img/Sketchnote_neu.png" id="Sketchnote">
+          <figcaption class="typo">Self-made sketchnote of the HTML-CSS workflow, as suggested in the Udacity's front end web developement nanodegree program (see fn [1])</figcaption>
+        </figure>
+        <p>At first, I just meant to use the sketchnote to make the whole process of creating a blog look more clear to me. So I took the development strategy, which consisted of 10 steps, and broke it down into 5 main bullet points. Basically I needed to have it in a nutshell. Plus, this way it was easier to fit the page.
+        As long as I went on drawing, I realized the idea was not that brilliant as I thought, at least not time saving since I’ve spent most of the time concentrating on drawing the figures (although they are very simple) rather then on the content.
+        Since I realized I have put some work into it, it made sense also use sketchnoting as a subject for this blog post...and here we are. </p>
 
-
+        <p>I know, for a sketchnote is not that much of a deal, but it’s also my first one, and very likely (and luckily for you) also my last one.
+        At least I could fill in a page.</p>
+        <hr>
+        <p id="fn1"><a href="#r1" id="link">[1]</a> See Udacity’s Front End Web Developer Nanodegree Program, Section 2 “Project: Personal Blog Website”, 3. Developement Strategy (2020).</p>
+      </div>
+      <div class="about">
+        <div class="about_flex">
+          <h3>About</h3>
+          <img src="img/Me.png" id="Me">
+          <p>Hej, Irene here! I started the Udacity’s Nanodegree a couple of weeks ago. This is my first blog ever.</p>
+        </div>
+      </div>
+      <div class="follow">
+        <h3>Follow</h3>
+        <div class="social">
+          <a href="#" id="social_icon"><img src="img/facebook.svg"></a>
+          <a href="#" id="social_icon"><img src="img/twitter.svg"></a>
+        </div>
+      </div>
+      <div class="footer">
+        <a href="index.html" id="link">back to home</a>
+      </div>
+    </div>
   </body>
 </html>
