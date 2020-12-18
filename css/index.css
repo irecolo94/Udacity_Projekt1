@@ -4,13 +4,13 @@
   display: grid;
   font-family: 'Cormorant Garamond', serif;
   grid-gap: 1em;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 1fr 4fr 1fr 1fr;
   grid-template-rows: 10% 2% auto 10%;
   grid-template-areas:
-  "header header"
-  "navbar navbar"
-  "content form"
-  "footer footer";
+  "header header header header"
+  "navbar navbar navbar navbar"
+  "vdi1 content form vdi2"
+  "footer footer footer footer";
   /*grid-template-columns: 1fr 2fr;
   grid-auto-rows: minmax(100px, auto);
   grid-gap: 1em;*/
@@ -20,44 +20,60 @@
 
 .header {
   grid-area: header;
-  display: flex;
-  flex-direction: row;
   background-color: #FDF0E3;
-  align-items: center;
-  padding: 2.5%;
+  justify-self: stretch;
+  align-self: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  /* padding: 2.5%; */
 }
 
-#title {
-  margin-top: 20px;
-  margin-bottom: 20px;
+#title_text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
-#searchbar {
+/* #searchbar {
   margin-left: auto;
-}
+} */
 
-
-/*h1*/
 
 .navbar {
   grid-area: navbar;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-left: 2%;
-  background-color: #FDF0E3;
+  justify-self: stretch;
+  /* padding-left: 2%; */
+  /* background-color: #FDF0E3; */
 }
 
-#nav_item {
+.navbar_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* align-items: center;
+  text-align: center; */
+}
+
+#item1,
+#item2,
+#item3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.navbar_content > a {
+  margin-top:none;
+  margin-bottom: none;
   margin-right: 4em;
   color: #E98305;
+  text-decoration: none;
   /* color: black; */
 }
 
-#nav_link {
-  color: #E98305;
-  text-decoration: none;
-}
+/*#nav_link {
+color: #E98305;
+}*/
+
 /*CONTENT*/
 .content {
   grid-area: content;
@@ -99,6 +115,8 @@
 form {
   display: flex;
   flex-direction: column;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 
@@ -108,7 +126,13 @@ form {
 
 .footer {
   grid-area: footer;
+  display: flex;
+  flex-direction: row;
   /*grid-row: 3;
   grid-column: 1/4;*/
   background-color: #FDF0E3;
+}
+
+#date {
+  margin-left: auto;
 }

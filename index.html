@@ -3,58 +3,59 @@
   <head>
     <meta charset="utf-8">
     <title>My first blog</title>
-    <link href="css/index.css" type="text/css" rel="stylesheet" />
+    <link href="css/main.css" type="text/css" rel="stylesheet" />
   </head>
   <body>
     <div class="grid-container">
-      <div class="header">
-        <div class="title">
-          <hr>
-          <h1 id="title">IRENE'S FIRST BLOG</h1>
-          <hr>
+      <header class="header">
+        <div class="title_index">
+          <h1 id="title_text">IRENE'S FIRST BLOG</h1>
         </div>
-         <input id="searchbar" type="text" placeholder="Search..">
+       </header>
+      <nav class="navbar">
+        <div class="navbar_content">
+          <a href="#index_cont" id="nav_item1"><h4 id="item1">Content</h4></a>
+          <a href="#index_form" id="nav_item2"><h4 id="item2">Contact</h4></a>
+          <a href="designsystem.html" id="nav_item3"><h4 id="item3">Design System</h4></a>
+          <input id="searchbar" type="text" placeholder="Search..">
         </div>
-      <div class="navbar">
-        <a href="#cont" id="nav_link"><h4 id="nav_item">Content</h4></a>
-        <a href="#form" id="nav_link"><h4 id="nav_item">Contact</h4></a>
-        <a href="designsystem.html" id="nav_link"><h4 id="nav_item">Design System</h4></a>
-      </div>
-      <div class="content" id="cont">
+      </nav>
+      <main class="content" id="index_cont">
         <!--image--><!--button!-->
-        <div id="post1">
+        <section id="post1">
           <div class="post1_textimg">
             <div class="post1_text">
               <h3>A first (and last?) approach to sketchnoting</h3>
-              <p id="pitalic">By Irene
+              <p><em>By Irene
                 <br>
                 December 20, 2020
+              </em>
               </p>
               <p>I would have never thought I had the time to think about and implement a personal content for this blog. Why would you bother writing a blog then, are you probably asking yourself. Actually, this blog is supposed to be a submission, a mere exercise. I was pretty looking forward to a page full of <i>lore ipsum</i>...<a id="link" href="blog-post.html">read more</a></p>
             </div>
             <div class="post1_img">
-              <img src="img/Sketchnote_neu.png" id="img_small">
+              <img src="img/Sketchnote_neu.png" alt="my_sketchnote" id="img_small">
             </div>
           </div>
-        </div>
-        <div id="post2">
+        </section>
+        <section id="post2">
           <h3>The next post</h3>
           <p id="pitalic">By Irene
           <br>
           ?, 2021
           </p>
-          <p>This will be my next post! <a href="notfound.html" id="link">read more</a></p>
-        </div>
-        <div id="post3">
+          <p>This will be my next post! <a href="notfound.html">read more</a></p>
+        </section>
+        <section id="post3">
           <h3>The next post after the next post</h3>
-          <p id="pitalic">By the_special_guest
+          <p><em>By the_special_guest
           <br>
           ?, 2021
-          </p>
-          <p>This will be the post of a special guest! <a href="notfound.html" id="link">read more</a></p>
-        </div>
-      </div>
-      <div class="form" id="form">
+          </em></p>
+          <p>This will be the post of a special guest! <a href="notfound.html">read more</a></p>
+        </section>
+      </main>
+      <article class="form" id="index_form">
         <form>
           <h4>Do you have any quesitons? <br> Don't hesitate to contact me!</h4>
           <label for="fname">Your name:</label>
@@ -65,11 +66,13 @@
           <input type="text" id="message" name="message"><br>
           <button type="button" id="button">submit</button>
         </form>
-      </div>
-      <div class="footer">
-        <p>Udacity nanodegree "Front End Web Developement" - first submission</p>
-        <a href="designsystem.html">Design System</a>
-      </div>
+      </article>
+      <footer class="footer">
+        <p>Udacity Nanodegree <u>"Front End Web Developement"</u> - first submission</p>
+        <p id="date">
+          <em>December 20,2020</em>
+        </p>
+      </footer>
     </div>
   </body>
 </html>

@@ -4,8 +4,10 @@
    .colors,
    p,
    a,
+   ul,
    #searchbar,
-   #link {
+   article
+   {
      font-family: 'Cormorant Garamond', serif;
    }
 
@@ -88,7 +90,6 @@
      border: 2px solid #00A991;
      width: 10rem;
    }
-   #link,
-   #link_cap {
+   a {
      color: #E98305;
    }
