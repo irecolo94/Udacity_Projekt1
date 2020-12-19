@@ -10,7 +10,7 @@
     <div class="grid-pb">
       <header class="header_bpost">
         <div class="header_content">
-          <div class="title">
+          <div class="title_bpost">
             <hr>
             <h4 id="title_post">IRENE'S FIRST BLOG</h4>
             <hr>
@@ -23,6 +23,14 @@
           <input class="searchbar" id="search_bpost" type="text" placeholder="Search..">
         </div>
        </header>
+      <article class="follow">
+         <!-- <h3>Follow</h3> -->
+         <div class="social">
+           <a href="#"><img src="img/facebook.svg" alt="fb_logo"></a>
+           <a href="#"><img src="img/twitter.svg" alt="twitter_logo"></a>
+           <a href="#"><img src="img/linkedin.svg" alt="linkedin_logo"></a>
+         </div>
+       </article>
       <article class="main">
         <h2>A first (and last?) approach to sketchnoting</h2>
         <div class="author">
@@ -33,21 +41,23 @@
           </em>
           </p>
         </div>
-        <p>I would have never thought I had the time to think about and implement a personal content for this blog. Why would you bother writing a blog then, are you probably asking yourself. Actually, this blog is supposed to be a submission, a mere exercise. I was pretty looking forward to a page full of <i>lore ipsum</i>, which always reminds me of my Latin classes at school (not that I enjoyed translating Latin, but the time at high school was a pretty good one). Moreover it sounds epic enough to fit my taste. </p>
-        <p>And then, a couple of days ago, I attended a small conference about the use of sketchnotes in the IT, held by Lisa Moritz. Who is she?, are you probably asking yourself. Nope, you’re not supposed to know her. She is a german developer who is having quite a lot of success in Germany lately because of her idea of applying simple and easy-to-imitate sketchnotes to tech topics. If you are interested (and, most of all, know German) check out her website:
+        <p>I would have never thought I had the time to think about and implement a personal content for this blog. <q>Why would you bother writing a blog then?</q>, you are probably asking yourself. Actually, this blog is supposed to be a submission, a mere exercise. I was pretty looking forward to a page full of <i>lore ipsum</i>, which always reminds me of my Latin classes at school (not that I enjoyed translating Latin, but the time at high school was a pretty good one). Moreover it sounds epic enough to fit my taste. </p>
+        <p>And then, a couple of days ago, I attended a small conference about the use of sketchnotes in the IT, held by Lisa Moritz. <q>Who is she?</q>, you are probably asking yourself. Nope, you’re not supposed to know her. She is a german developer who is having quite a lot of success in Germany lately because of her idea of applying simple and easy-to-imitate sketchnotes to tech topics. If you are interested (and, most of all, know German) check out her website:
         <a href="https://www.sketchnotes.tech/about/">https://www.sketchnotes.tech/about/</a> . If you don’t know German, you can check out also <a href="https://rohdesign.com/">https://rohdesign.com/</a>. </p>
-        <p>You are probably asking yourself what the point of this all is. During her speech, Lisa stretched out that:</p>
+        <p>You are (again) probably asking yourself: <q>What is the point of this all?</q> During her speech, Lisa stretched out that:</p>
+        <blockquote cite="Lisa Moritz, Innoq-Day (https://technologyday.innoq.com/programm/sketchnotes-in-der-it)">
           <ul>
-          <li>anyone can quickly make some sketchnotes</li>
-          <li>they help a lot in remembering</li>
-          <li>they are also a lot of fun</li>
+            <li>anyone can quickly make some sketchnotes</li>
+            <li>they help a lot in remembering</li>
+            <li>they are also a lot of fun</li>
           </ul>
+        </blockquote>
         <p>Clearly, the idea has potential.
         I started thinking. If she’s right, then I could also do some sketchnoting about HTML and CSS!
         It would have made sense to start with something simple. Sketchnoting the developement strategy for this blog, as suggested by the Udacity tutors, would have fit the purpose. <sup><a href="#fn1" id="r1">[1]</a></sup> And ta daa! This is what I’ve come up with:
         </p>
         <figure id="sketchnotes">
-          <img src="img/Sketchnote_neu.png" alt="my_sketchnote" id="Sketchnote">
+          <img src="img/Sketchnote_neu.png" alt="my_sketchnote" id="Sketchnote_img">
           <figcaption class="typo">Self-made sketchnote of the HTML-CSS workflow, as suggested in the Udacity's front end web developement nanodegree program (see fn [1])</figcaption>
         </figure>
         <p>At first, I just meant to use the sketchnote to make the whole process of creating a blog look more clear to me. So I took the development strategy, which consisted of 10 steps, and broke it down into 5 main bullet points. Basically I needed to have it in a nutshell. Plus, this way it was easier to fit the page.
@@ -59,23 +69,20 @@
         <hr>
         <p id="fn1"><a href="#r1">[1]</a> See Udacity’s Front End Web Developer Nanodegree Program, Section 2 “Project: Personal Blog Website”, 3. Developement Strategy (2020).</p>
       </article>
-      <article class="about" id="about">
+      <article class="about">
         <div class="about_flex">
           <h3>About</h3>
           <img src="img/Me.png" id="Me" alt="selfmade_portrait">
-          <p>Hej, Irene here! I started the Udacity’s Nanodegree a couple of weeks ago. This is my first blog ever.</p>
+          <p>Hej, Irene here! I started the <strong>Udacity’s Nanodegree</strong> in front end web developement a couple of weeks ago. Apart from that I am working in a small Startup in Berlin.
+            This is my first blog ever.</p>
         </div>
       </article>
-      <article class="follow">
-        <!-- <h3>Follow</h3> -->
-        <div class="social">
-          <a href="#"><img src="img/facebook.svg" alt="fb_logo"></a>
-          <a href="#"><img src="img/twitter.svg" alt="twitter_logo"></a>
-          <a href="#"><img src="img/linkedin.svg" alt="linkedin_logo"></a>
-        </div>
+      <article class="more_posts">
+          <a href="notfound.html" class="link_button">Previous Post</a>
+          <a href="notfound.html" class="link_button">Next Post</a>
       </article>
       <footer class="footer">
-        <p>Udacity Nanodegree <u>"Front End Web Developement"</u> - first submission</p>
+        <p>Udacity's <u>Front End Web Developer</u> Nanodegree Program - Project 1</p>
         <p id="date">
           <em>December 20,2020</em>
         </p>

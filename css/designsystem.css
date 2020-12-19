@@ -1,21 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,700;1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
    .typo,
    .colors,
+   .searchbar,
    p,
    a,
    ul,
-   .searchbar,
+   ol,
    article
    {
      font-family: 'Cormorant Garamond', serif;
    }
 
    h3,
-   #button,
    h2,
    h4,
-   #link_cap {
+   h1,
+   button,
+   .link_cap {
      font-family: 'Amatic SC', cursive;
      text-transform: uppercase;
    }
@@ -32,27 +35,22 @@
  }
 
    h1 {
-     font-family: 'Amatic SC', cursive;
-     text-transform: uppercase;
      font-size: 4em;
    }
 
-   p {
+   p,
+   ul,
+   ol,
+   a {
      font-size: 1.2rem;
    }
-   #pstrong {
-     font-weight: 700;
-     color: black;
-   }
-   #pitalic {
-     font-style: Italic;
-   }
-   #punderline {
-     text-decoration: underline;
-   }
+
+
    .grid-colors{
-     display: inline-grid;
+     display: flex;
+     flex-direction: row;
    }
+
    .colors {
      width: 100px;
      height: 100px;
@@ -61,35 +59,52 @@
      border-radius: 60px;
      text-align: center;
    }
+
    #orange {
      background-color: #FDF0E3;
    }
+
    #green {
      background-color: #EBF4EC;
      grid-column-start: 2;
    }
+
    #lightgrey {
      background-color: #F5F7F9;
      grid-column-start: 3;
    }
+
    #buttoncolor {
      background-color: #00A991;
      grid-column-start: 2;
    }
+
    #linkcolor {
      background-color: #E98305;
    }
-   #button {
+
+   button {
      background-color: #F5F7F9;
      color: #00A991;
-/*     padding-top: 2%;
-     padding-bottom: 2%; */
      font-weight: bold;
      font-size: 1.2em;
      border-radius: 10px;
      border: 2px solid #00A991;
      width: 10rem;
    }
+
+   button:hover {
+     background: #EBF4EC;
+   }
+
    a {
      color: #E98305;
    }
+
+/* RESPONSIVENESS  */
+
+@media (max-width: 480px) {
+  .grid-colors {
+    flex-direction: column;
+  }
+}
