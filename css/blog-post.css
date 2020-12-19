@@ -95,7 +95,7 @@
 }
 
 
-.about_flex {
+/* .about_flex {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,15 +103,15 @@
 
 .about_flex > h3 {
   color: #00A991;
-}
+} */
 
-#Me {
+/* .Me {
   max-width: 10rem;
   max-height: 10rem;
   border-radius: 100px;
   margin-left: 2.5rem;
   margin-right: 2.5rem;
-}
+} */
 
 /*FOLLOW*/
 
