@@ -44,7 +44,7 @@
   align-items: center;
 }
 
-.navbar_content > a {
+.nav_item {
   margin-top:none;
   margin-bottom: none;
   margin-right: 4em;
@@ -52,7 +52,7 @@
   text-decoration: none;
 }
 
-.navbar_content > a:hover {
+.nav_item:hover {
   text-decoration: underline;
 }
 
@@ -136,7 +136,7 @@ form {
   padding-bottom: 1em;
 }
 
-form > h4 {
+#form_title {
   text-align: center;
 }
 
@@ -162,7 +162,7 @@ form > h4 {
   justify-content: space-around;
 }
 
-.index_social > a {
+.social_icon {
   height: 2rem;
   width: 2rem;
   padding: 0.5rem;
@@ -228,7 +228,7 @@ form > h4 {
     display: none;
   }
 
-  .navbar_content > a {
+  .nav_item {
     margin-right: 1em;
   }
 }

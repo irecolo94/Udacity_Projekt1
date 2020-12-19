@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My first blog</title>
-    <link href="css/main.css" type="text/css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet"/>
   </head>
   <body>
     <div class="grid-container">
@@ -15,9 +15,9 @@
        </header>
       <nav class="navbar">
         <div class="navbar_content">
-          <a href="#index_cont" id="nav_item1"><h4 id="item1">Content</h4></a>
-          <a href="#index_about_ref" id="nav_item2"><h4 id="item2">About/Contact</h4></a>
-          <a href="designsystem.html" id="nav_item3"><h4 id="item3">Design System</h4></a>
+          <a href="#index_cont" class="nav_item"><h4 id="item1">Content</h4></a>
+          <a href="#index_about_ref" class="nav_item"><h4 id="item2">About/Contact</h4></a>
+          <a href="designsystem.html" class="nav_item"><h4 id="item3">Design System</h4></a>
           <input class="searchbar" id="searchbar_large" type="text" placeholder="Search..">
         </div>
       </nav>
@@ -66,7 +66,7 @@
       </article>
       <article class="form" id="index_form">
         <form>
-          <h4>Do you have any quesitons? <br> Don't hesitate to contact me!</h4>
+          <h4 id="form_title">Do you have any quesitons? <br> Don't hesitate to contact me!</h4>
           <label for="fname">Your name:</label>
           <input type="text" id="fname" name="fname"><br>
           <label for="email">Your E-mail:</label>
@@ -79,9 +79,9 @@
       <article class="index_follow">
          <h4>You like this content? Follow me:</h4>
          <div class="index_social">
-           <a href="#"><img src="img/facebook.svg" alt="fb_logo"></a>
-           <a href="#"><img src="img/twitter.svg" alt="twitter_logo"></a>
-           <a href="#"><img src="img/linkedin.svg" alt="linkedin_logo"></a>
+           <a href="#" class="social_icon"><img src="img/facebook.svg" alt="fb_logo"></a>
+           <a href="#" class="social_icon"><img src="img/twitter.svg" alt="twitter_logo"></a>
+           <a href="#" class="social_icon"><img src="img/linkedin.svg" alt="linkedin_logo"></a>
          </div>
        </article>
       <footer class="footer">

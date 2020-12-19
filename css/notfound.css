@@ -1,6 +1,7 @@
+/* RESPONSIVENESS */
+
 @media (max-width: 700px) {
   #img_notfound{
     width: 80%;
   }
-
 }
