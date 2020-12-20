@@ -5,7 +5,7 @@
   font-family: 'Cormorant Garamond', serif;
   grid-gap: 1em;
   grid-template-columns: 1fr 4fr 1fr 1fr;
-  grid-template-rows: 10% 2% 1fr 1fr 1fr 15%;
+  grid-template-rows: 10% 2% 1fr auto 1fr 15%;
   grid-template-areas:
   "header header header header"
   "navbar navbar navbar navbar"
@@ -89,8 +89,6 @@
   background-color: white;
 }
 
-
-
 #img_small {
   max-width: 341,5px;
   max-height: 256px;
@@ -140,6 +138,10 @@ form {
 
 #message {
   min-height: 8em;
+}
+
+#index_button {
+  margin: 1em 0em;
 }
 
 /* FOLLOW */
