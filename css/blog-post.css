@@ -33,8 +33,7 @@
 
 #title_post {
   font-size: 1.5em;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin: 5px 0px;
 }
 
 /*HEAD.NAVBAR*/
@@ -60,9 +59,7 @@
 
 .main {
   grid-area: post;
-  padding-top: 1em;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding: 1em 2em 0em;
 }
 
 .author {
@@ -127,12 +124,11 @@
 
 .link_button {
   font-family: 'Amatic SC', cursive;
+  display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
-  display: inline-block;
   text-align: center;
   line-height: 3;
-  color: black;
   background-color: #F5F7F9;
   color: #00A991;
   font-weight: bold;
@@ -184,8 +180,7 @@
 
 #title_post {
   font-size: 1em;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin: 5px 0px;
 }
 
 .navbar_bpost {
@@ -221,13 +216,6 @@
   border: 1px solid #00A991;
 }
 
-.main {
-  grid-area: post;
-  padding-top: 0px;
-  padding-left: 2em;
-  padding-right: 2em;
-}
-
 #post_title {
   margin-top: 0px;
 }
@@ -239,7 +227,6 @@
 .link_button {
   margin: 0px;
 }
-
 }
 
 /* MEDIUM SCREEN (tablets, small laptops) */
