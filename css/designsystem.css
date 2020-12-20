@@ -1,102 +1,111 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,700;1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 
-   .typo,
-   .colors,
-   .searchbar,
-   p,
-   a,
-   ul,
-   ol,
-   article
-   {
-     font-family: 'Cormorant Garamond', serif;
-   }
-
-   h3,
-   h2,
-   h4,
-   h1,
-   button,
-   .link_cap {
-     font-family: 'Amatic SC', cursive;
-     text-transform: uppercase;
-   }
-
-   h4 {
-     font-size: 1.4em;
-   }
-
-   h2 {
-     font-size: 3em;
-   }
-   h3 {
-     font-size: 2em;
+ .typo,
+ .colors,
+ .searchbar,
+ p,
+ a,
+ ul,
+ ol,
+ article
+ {
+   font-family: 'Cormorant Garamond', serif;
  }
 
-   h1 {
-     font-size: 4em;
-   }
+ h3,
+ h2,
+ h4,
+ h1,
+ button,
+ .link_cap,
+ .nav_item_ds {
+   font-family: 'Amatic SC', cursive;
+   text-transform: uppercase;
+ }
 
-   p,
-   ul,
-   ol,
-   a {
-     font-size: 1.2rem;
-   }
+ h4 {
+   font-size: 1.4em;
+ }
+
+ h2 {
+   font-size: 3em;
+ }
+ h3 {
+   font-size: 2em;
+}
+
+ h1 {
+   font-size: 4em;
+ }
+
+ p,
+ ul,
+ ol,
+ a {
+   font-size: 1.2rem;
+ }
 
 
-   .grid-colors{
-     display: flex;
-     flex-direction: row;
-   }
+ .grid-colors{
+   display: flex;
+   flex-direction: row;
+ }
 
-   .colors {
-     width: 100px;
-     height: 100px;
-     margin: 20px;
-     padding: 10px;
-     border-radius: 60px;
-     text-align: center;
-   }
+ .colors {
+   width: 100px;
+   height: 100px;
+   margin: 20px;
+   padding: 10px;
+   border-radius: 60px;
+   text-align: center;
+ }
 
-   #orange {
-     background-color: #FDF0E3;
-   }
+ #orange {
+   background-color: #FDF0E3;
+ }
 
-   #green {
-     background-color: #EBF4EC;
-   }
+ #green {
+   background-color: #EBF4EC;
+ }
 
-   #lightgrey {
-     background-color: #F5F7F9;
-   }
+ #lightgrey {
+   background-color: #F5F7F9;
+ }
 
-   #buttoncolor {
-     background-color: #00A991;
-   }
+ #buttoncolor {
+   background-color: #00A991;
+ }
 
-   #linkcolor {
-     background-color: #E98305;
-   }
+ #linkcolor {
+   background-color: #E98305;
+ }
 
-   button {
-     background-color: #F5F7F9;
-     color: #00A991;
-     font-weight: bold;
-     font-size: 1.2em;
-     border-radius: 10px;
-     border: 2px solid #00A991;
-     width: 10rem;
-   }
+ button {
+   background-color: #F5F7F9;
+   color: #00A991;
+   font-weight: bold;
+   font-size: 1.2em;
+   border-radius: 10px;
+   border: 2px solid #00A991;
+   width: 10rem;
+ }
 
-   button:hover {
-     background: #EBF4EC;
-   }
+ button:hover {
+   background: #EBF4EC;
+ }
 
-   a {
-     color: #E98305;
-   }
+ a {
+   color: #E98305;
+ }
+
+ .nav_item_ds {
+   text-decoration: none;
+ }
+
+ .nav_item_ds:hover {
+   text-decoration: underline;
+ }
 
 /* RESPONSIVENESS  */
 

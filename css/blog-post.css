@@ -146,7 +146,7 @@
 
 /* RESPONSIVENESS */
 
-/* SMALL SCREEN (handys, tablets) */
+/* SMALL SCREEN (handys, small tablets) */
 
 @media (max-width: 700px) {
 .grid-pb {
@@ -185,6 +185,10 @@
 
 .navbar_bpost {
   grid-area: navbar;
+}
+
+.nav_pb_item {
+  margin: 0px 5px;
 }
 
 #search_bpost {
@@ -229,7 +233,7 @@
 }
 }
 
-/* MEDIUM SCREEN (tablets, small laptops) */
+/* MEDIUM SCREEN (ipads, small laptops) */
 
 @media (min-width: 700px) and (max-width: 1200px) {
   .grid-pb {
