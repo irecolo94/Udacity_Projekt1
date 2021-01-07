@@ -44,6 +44,16 @@ navLinks.forEach(link => {
 
 // add a stopscrolling event which hides the bar
 const navID = document.getElementById('nav');
+let scrollTimer = "";
+document.addEventListener('scroll', () => {
+  clearTimeout(scrollTimer);
+  navID.style = "position: sticky; top: 0px;";
+  scrollTimer = setTimeout(changeStyle, 1000);
+});
+
+function changeStyle() {
+  navID.style = "";
+};
 
 // let scrollStop = () => {
 //   document.addEventListener('scroll', () => {
