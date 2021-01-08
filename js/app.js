@@ -6,11 +6,18 @@ const navbar = document.getElementById("navbar_content");
 const secs = document.querySelectorAll("section");
 // console.log(secs);
 
+// consts for the bar animation:
+const active2 = document.querySelector(".active2");
+const colors = ["#FDF0E3", "#EBF4EC", "#F5F7F9"];
+// const activeClass = document.querySlector(".active-class");
+
+
 // dynamic navigation:
-secs.forEach(function(section) {
+secs.forEach( (section) => {
     const secId = section.id;
     const secMenuName = section.dataset.menuname;
-    navbar.innerHTML += '<li class="nav_item">' + '<a data-page="' + secMenuName + '" href="#' + secId + '">' + '<h4>' + secMenuName + '</h4>' + '</a>' + '</li>';
+    const secClass = section.classList[0];
+    navbar.innerHTML += '<li class="nav_item">' + '<a data-page="' + secMenuName + '" ' + 'data-sectionclass ="' + secClass + '" href="#' + secId + '">' + '<h4>' + secMenuName + '</h4>' + '</a>' + '</li>';
   });
 
 // add active states:
@@ -44,6 +51,8 @@ navLinks.forEach(link => {
 
 // add a stopscrolling event which hides the bar
 const navID = document.getElementById('nav');
+
+
 let scrollTimer = "";
 document.addEventListener('scroll', () => {
   clearTimeout(scrollTimer);
@@ -53,10 +62,49 @@ document.addEventListener('scroll', () => {
 
 function changeStyle() {
   navID.style = "";
+  active2.style = ""; // this is something I need for later on, where I track active states of the thing
 };
 
-// let scrollStop = () => {
-//   document.addEventListener('scroll', () => {
-//     setTimeout(() => {navID.style = "";}, 50)
-//   });
+
+// add active states to both navbar and sections
+// const detectCustom = {
+//   threshold: 0.7
 // };
+
+
+let observer = new IntersectionObserver(detectNav/*, detectCustom*/);
+
+function detectNav(items) {
+  items.forEach(item => {
+    // console.log(item);
+    const sectionClass = item.target.classList[0];
+    const activeClass = item.target.classList[1];
+    const corrAnchor = document.querySelector(`[data-sectionclass = ${sectionClass}]`); //detects which one is the corrisponding anchor
+    const colorsIndex = item.target.getAttribute('data-index');
+    const position = corrAnchor.getBoundingClientRect();
+    const aim = {
+      height: position.height,
+      width: position.width,
+      top: position.top,
+      left: position.left
+    };
+    console.log(aim);
+    if(item.isIntersecting) {
+      active2.style.setProperty('left', `${aim.left}px`);
+      active2.style.setProperty('top', `${aim.top}px`);
+      active2.style.setProperty('width', `${aim.width}px`);
+      active2.style.setProperty('height', `${aim.height}px`);
+      active2.style.setProperty('background', colors[colorsIndex]);
+      console.log(sectionClass);
+    //   const elmn = document.querySelector(`.${sectionClass}`);
+    //   elmn.style.setProperty('border', '2px solid black');
+    // } else {
+    //   const elmn = document.querySelector(`.${sectionClass}`);
+    //   elmn.style.removeProperty('border', '2px solid black');
+    };
+  });
+};
+
+secs.forEach(sec => {
+  observer.observe(sec);
+});

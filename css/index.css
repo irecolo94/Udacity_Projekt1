@@ -94,11 +94,15 @@ nav h4{
 }
 
 .activebox {
-  /* position: absolute;
-  z-index: -2; /*this makes something behind something else */
   background: #EBF4EC;
 }
 
+.active2 {
+  position: absolute;
+  z-index: -2;
+  /* background: #EBF4EC; */
+  transform: scale(1.5);
+} /*this makes something behind something else */
 /*CONTENT*/
 
 .content {
