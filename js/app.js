@@ -1,18 +1,13 @@
-// global const:
-
+// **GLOBAL CONST DEFINITION:**
 const navbar = document.getElementById("navbar_content");
-// console.log(navbar);
-
+const navID = document.getElementById("nav");
 const secs = document.querySelectorAll("section");
-// console.log(secs);
 
 // consts for the bar animation:
 const active2 = document.querySelector(".active2");
 const colors = ["#FDF0E3", "#EBF4EC", "#F5F7F9"]; // orange, green, lightgrey
-// const activeClass = document.querySlector(".active-class");
 
-
-// dynamic navigation:
+// **DYNAMIC NAVIGATION**
 secs.forEach((section) => {
   const secId = section.id;
   const secMenuName = section.dataset.menuname;
@@ -20,9 +15,9 @@ secs.forEach((section) => {
   navbar.innerHTML += '<li class="nav_item">' + '<a data-page="' + secMenuName + '" ' + 'data-sectionclass ="' + secClass + '" href="#' + secId + '">' + '<h4>' + secMenuName + '</h4>' + '</a>' + '</li>';
 });
 
-// add active states:
+// **MARK ITEMS AS ACTIVE IF YOU CLICK ON THEM**
+//consts for active clicked items
 const navbarItems = navbar.querySelectorAll("li");
-
 const alreadyActive = document.getElementsByClassName("activebox");
 
 navbarItems.forEach(item => {
@@ -32,8 +27,8 @@ navbarItems.forEach(item => {
   });
 });
 
-// add a scrolldown function
-
+//**SCROLLDOWN FUNCTION**
+//consts for scrolldown function
 const anchorSelector = 'a[href^="#"]';
 const navLinks = navbar.querySelectorAll(anchorSelector);
 
@@ -48,32 +43,26 @@ navLinks.forEach(link => {
   });
 });
 
-
-
-
-
-// try not to hide bar if pointer is on it
-
-
-// add active states to both navbar and sections
-
-function detectGo () {
+// ** ACTIVE STATES FOR BAR AND SECS IF SEC IS IN VIEWPORT
+function detectGo() {
   const detectCustom = {
     root: null,
     rootMargin: '0px',
     threshold: 0.5
-    // rootMargin: "100px 100px 100px 100px"
   };
 
+  // create an intersection observe which observes if section is in viewport
   let observer = new IntersectionObserver(detectNav, detectCustom);
 
   function detectNav(items) {
     items.forEach(item => {
       const sectionClass = item.target.classList[0];
       const corrAnchor = document.querySelector(`[data-sectionclass = ${sectionClass}]`); //detects which one is the corrisponding anchor
-      const colorsIndex = item.target.getAttribute('data-index');
+      const colorsIndex = item.target.getAttribute('data-index'); //used for giving the div the colors of the section
       const position = corrAnchor.getBoundingClientRect();
       const aim = {
+        x: position.x,
+        y: position.y,
         height: position.height,
         width: position.width,
         top: position.top,
@@ -85,6 +74,8 @@ function detectGo () {
         active2.style.setProperty('top', `${aim.top}px`);
         active2.style.setProperty('width', `${aim.width}px`);
         active2.style.setProperty('height', `${aim.height}px`);
+        active2.style.setProperty('x', `${aim.x}px`);
+        active2.style.setProperty('y', `${aim.y}px`);
         active2.style.setProperty('background', colors[colorsIndex]);
         console.log(sectionClass);
         const elmn = document.querySelector(`.${sectionClass}`);
@@ -109,16 +100,16 @@ function detectGo () {
 };
 detectGo();
 
-
-
-// make sections collapsible
-
+// ** MAKE SECTIONS COLLAPSIBLE
 secs.forEach((section) => {
   const collApse = section.querySelector(".collapse");
   console.log(collApse);
   collApse.addEventListener('click', () => {
-    if (collApse.innerHTML === "++") {collApse.innerHTML = "--"}
-    else if (collApse.innerHTML === "--") {collApse.innerHTML = "++"}
+    if (collApse.innerHTML === "++") {
+      collApse.innerHTML = "--"
+    } else if (collApse.innerHTML === "--") {
+      collApse.innerHTML = "++"
+    }
     // console.log(collText);
     // collText = "";
     subSection = section.querySelector(".actual-content");
@@ -127,8 +118,7 @@ secs.forEach((section) => {
   });
 });
 
-
-// create a button to go up
+// ** CREATES A BUTTON TO GO UP TO PAGE TOP
 const topBut = document.getElementById("go-top");
 window.onscroll = function() {
   if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
@@ -139,10 +129,7 @@ window.onscroll = function() {
 };
 
 
-// add a stopscrolling event which hides the bar -----> I NEED TO TRIGGER IT AFTER THE DETECTOR!
-const navID = document.getElementById('nav');
-
-
+//** ADD AN EVENT WHICH DETECTS IF USER IS SCROLLING
 let scrollTimer = "";
 
 function changeBarBe() {
@@ -159,9 +146,9 @@ document.addEventListener('mousemove', (event) => {
   }
 });
 
-changeBarBe();
-
 function changeStyle() {
   navID.style = "";
   active2.style = ""; // this is something I need for later on, where I track active states of the thing
 };
+
+changeBarBe();
