@@ -8,7 +8,7 @@ const secs = document.querySelectorAll("section");
 
 // consts for the bar animation:
 const active2 = document.querySelector(".active2");
-const colors = ["#FDF0E3", "#EBF4EC", "#F5F7F9"];
+const colors = ["#FDF0E3", "#EBF4EC", "#F5F7F9"]; // orange, green, lightgrey
 // const activeClass = document.querySlector(".active-class");
 
 
@@ -54,28 +54,42 @@ const navID = document.getElementById('nav');
 
 
 let scrollTimer = "";
-document.addEventListener('scroll', () => {
+function changeBarBe() {
+  document.addEventListener('scroll', () => {
   clearTimeout(scrollTimer);
   navID.style = "position: sticky; top: 0px;";
   scrollTimer = setTimeout(changeStyle, 1000);
 });
+};
+
+document.addEventListener('mousemove', (event) => {
+  if(event.pageY > 75){navID.style = "position: sticky; top: 0px;";
+}
+});
+
+changeBarBe();
 
 function changeStyle() {
   navID.style = "";
   active2.style = ""; // this is something I need for later on, where I track active states of the thing
 };
 
+// try not to hide bar if pointer is on it
+function stayOnBar() {
+    navID.style = "position: sticky; top: 0px;";
+};
 
 // add active states to both navbar and sections
-// const detectCustom = {
-//   threshold: 0.7
-// };
+const detectCustom = {
+  threshold: 0.5
+  // rootMargin: "100px 100px 100px 100px"
+};
 
 
-let observer = new IntersectionObserver(detectNav/*, detectCustom*/);
+let observer = new IntersectionObserver(detectNav, detectCustom);
 
 function detectNav(items) {
-  items.forEach(item => {
+    items.forEach(item => {
     // console.log(item);
     const sectionClass = item.target.classList[0];
     const activeClass = item.target.classList[1];
@@ -88,7 +102,7 @@ function detectNav(items) {
       top: position.top,
       left: position.left
     };
-    console.log(aim);
+    // console.log(aim);
     if(item.isIntersecting) {
       active2.style.setProperty('left', `${aim.left}px`);
       active2.style.setProperty('top', `${aim.top}px`);
@@ -96,11 +110,10 @@ function detectNav(items) {
       active2.style.setProperty('height', `${aim.height}px`);
       active2.style.setProperty('background', colors[colorsIndex]);
       console.log(sectionClass);
-    //   const elmn = document.querySelector(`.${sectionClass}`);
-    //   elmn.style.setProperty('border', '2px solid black');
-    // } else {
-    //   const elmn = document.querySelector(`.${sectionClass}`);
-    //   elmn.style.removeProperty('border', '2px solid black');
+      const elmn = document.querySelector(`.${sectionClass}`);
+      activeSection(elmn);
+      const secPosition = elmn.getBoundingClientRect();
+      console.log(secPosition);
     };
   });
 };
@@ -108,3 +121,24 @@ function detectNav(items) {
 secs.forEach(sec => {
   observer.observe(sec);
 });
+
+// detect if a section is active in viewport
+const sectionViewed = document.getElementsByClassName("active-class");
+function activeSection(sec) {
+  sectionViewed[0].classList.toggle("active-class");
+  sec.classList.add("active-class");
+};
+
+
+// make sections collapsible
+
+
+// create a button to go up
+const topBut = document.getElementById("go-top");
+window.onscroll = function() {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+      topBut.style = "display: block;";
+    } else {
+      topBut.style = "display: none;";
+    }
+};
