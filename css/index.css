@@ -16,7 +16,6 @@
   "footer footer footer";
   }
 
-
 /*HEADER*/
 
 .header {
@@ -70,13 +69,11 @@ nav h4{
 }
 
 .activebox {
-  background: #EBF4EC;
+  border: 1px solid black;
 }
 
-.active2 {
-  position: absolute;
-  z-index: -2;
-  border-radius: 50%;
+#noshow {
+  display: none;
 }
 
 /*CONTENT*/
@@ -284,9 +281,11 @@ form {
     display: flex;
     flex-direction: column;
   }
+
   .collapsible-post {
     display: none;
   }
+
   #button-posts {
     display: block;
     background-color: white;
