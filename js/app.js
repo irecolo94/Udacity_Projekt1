@@ -5,12 +5,19 @@ const secs = document.querySelectorAll('section');
 
 
 // **DYNAMIC NAVIGATION**
-secs.forEach((section) => {
-  const secId = section.id;
-  const secMenuName = section.dataset.menuname;
-  const secClass = section.classList[0];
-  navbar.innerHTML += '<li class="nav_item">' + '<a data-page="' + secMenuName + '" ' + 'data-sectionclass ="' + secClass + '" href="#' + secId + '">' + '<h4>' + secMenuName + '</h4>' + '</a>' + '</li>';
-});
+function updateNav() {
+    let list = "";
+  secs.forEach((section) => {
+    const secId = section.id;
+    const secMenuName = section.dataset.menuname;
+    const secClass = section.classList[0];
+    const toUpdate = '<li class="nav_item">' + '<a data-page="' + secMenuName + '" ' + 'data-sectionclass ="' + secClass + '" href="#' + secId + '">' + '<h4>' + secMenuName + '</h4>' + '</a>' + '</li>';
+    list += toUpdate;
+  });
+    navbar.innerHTML += list;
+};
+
+updateNav();
 
 // **MARK ITEMS AS ACTIVE IF YOU CLICK ON THEM**
 //consts for active clicked items
