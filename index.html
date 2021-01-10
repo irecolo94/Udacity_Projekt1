@@ -1,126 +1,130 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My first blog</title>
-    <link href="css/main.css" rel="stylesheet"/>
-  </head>
-  <body>
-    <div class="grid-container">
-      <header class="header">
-        <div class="title_index">
-          <h1 id="title_text">IRENE'S FIRST BLOG</h1>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My first blog</title>
+  <link href="css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="grid-container">
+    <header class="header">
+      <div class="title_index">
+        <h1 id="title_text">IRENE'S FIRST BLOG</h1>
+      </div>
+    </header>
+    <nav class="navbar" id="nav">
+      <ul id="navbar_content">
+        <div class="activebox">
         </div>
-       </header>
-       <nav class="navbar" id="nav">
-         <div class="active2">
-         </div>
-         <ul id="navbar_content">
-           <div class="activebox">
-           </div>
-         </ul>
-       </nav>
-      <!-- <input class="searchbar" id="searchbar_large" type="text" placeholder="Search.."> -->
-      <!-- <input class="searchbar" id="searchbar_mobile" type="text" placeholder="Search.."> -->
-      <section data-index="0" data-menuname="content" class="content active-class" id="index_cont">
-        <button class="collapse">--</button>
-        <div class="actual-content">
-          <div id="posts">
-            <div id="post1">
-                <div class="post_textimg">
-                  <div class="post1_text">
-                    <h3>A first (and last?) approach to sketchnoting</h3>
-                    <p><em>By Irene
-                      <br>
-                      December 20, 2020
-                    </em>
-                  </p>
-                  <p>I would have never thought I had the time to think about and implement a personal content for this blog. <q>Why would you bother writing a blog then?</q>, you are probably asking yourself. Actually, this blog is supposed to be a submission, a mere exercise. I was pretty looking forward to a page full of <i>lore ipsum</i>...<a id="link" href="blog-post.html">read more</a></p>
-                </div>
-                <div class="post1_img">
-                  <img src="img/Sketchnote_neu.png" alt="my_sketchnote" id="img_small">
-                </div>
-              </div>
-            </div>
-            <div id="post2">
-              <div class="post_textimg">
-                <h3>The next post</h3>
+      </ul>
+    </nav>
+    <section data-index="0" data-menuname="content" class="content active-class" id="index_cont">
+      <button class="collapse">--</button>
+      <div class="actual-content">
+        <div id="posts">
+          <div id="post1">
+            <div class="post_textimg">
+              <div class="post1_text">
+                <h3>A first (and last?) approach to sketchnoting</h3>
                 <p><em>By Irene
-                  <br>
-                  ?, 2021
-                </em></p>
-                <p>This will be my next post! And it will not begin so: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur... <a href="notfound.html">read more</a></p>
-                <div class="other_image">
-                  <img src="img/construction.png" alt="work_in_progress" class="img_notfound">
-                </div>
+                    <br>
+                    December 20, 2020
+                  </em>
+                </p>
+                <p>I would have never thought I had the time to think about and implement a personal content for this blog. <q>Why would you bother writing a blog then?</q>, you are probably asking yourself. Actually, this blog is supposed to be a
+                  submission, a mere exercise. I was pretty looking forward to a page full of <i>lore ipsum</i>...<a id="link" href="">read more</a></p>
+              </div>
+              <div class="post1_img">
+                <img src="img/Sketchnote_neu.png" alt="my_sketchnote" id="img_small">
               </div>
             </div>
-            <div id="post3">
-              <div class="post_textimg">
-                <h3>The next post after the next post</h3>
-                <p><em>By the_special_guest
+          </div>
+          <button class="collapse" id="button-posts">more</button>
+          <div id="post2" class="collapsible-post" data-collapse="killme">
+            <div class="post_textimg">
+              <h3>The next post</h3>
+              <p><em>By Irene
                   <br>
                   ?, 2021
                 </em></p>
-                <p>This will be the post of a special guest and it will begin so: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <a href="notfound.html">read more</a></p>
-                <div class="other_image">
-                  <img src="img/construction.png" alt="work_in_progress" class="img_notfound">
-                </div>
+              <p>This will be my next post! And it will not begin so: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur... <a href="">read more</a></p>
+              <div class="other_image">
+                <img src="img/construction.png" alt="work_in_progress" class="img_notfound">
+              </div>
+            </div>
+          </div>
+          <div id="post3" class="collapsible-post" data-collapse="killme">
+            <div class="post_textimg">
+              <h3>The next post after the next post</h3>
+              <p><em>By the_special_guest
+                  <br>
+                  ?, 2021
+                </em></p>
+              <p>This will be the post of a special guest and it will begin so: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <a href="">read more</a></p>
+              <div class="other_image">
+                <img src="img/construction.png" alt="work_in_progress" class="img_notfound">
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section data-index="2" data-menuname="about" class="index_about" id="index_about_ref">
-        <button class="collapse">--</button>
-        <div class="actual-content">
-          <div class="about_flex">
-            <h3>About</h3>
-            <img src="img/Me.png" class="Me" alt="selfmade_portrait">
-            <p>Hej, Irene here! I started the <strong>Udacity’s Nanodegree</strong> in front end web developement a couple of weeks ago. Apart from that I am working in a small Startup in Berlin.
-              This is my first blog ever.</p>
-            </div>
+      </div>
+    </section>
+    <section data-index="2" data-menuname="about" class="index_about" id="index_about_ref">
+      <button class="collapse">--</button>
+      <div class="actual-content">
+        <div class="about_flex">
+          <h3>About</h3>
+          <img src="img/Me.png" class="Me" alt="selfmade_portrait">
+          <p>Hej, Irene here! I started the <strong>Udacity’s Nanodegree</strong> in front end web developement a couple of weeks ago. Apart from that I am working in a small Startup in Berlin.
+            This is my first blog ever.</p>
         </div>
-      </section>
-      <section data-index="1" data-menuname="contact" class="form" id="index_form">
-        <button class="collapse">--</button>
-        <form class="actual-content">
-          <h3 id="form_title">Do you have any quesitons? <br> Don't hesitate to contact me!</h3>
-          <label for="fname">Your name:</label>
-          <input type="text" id="fname" name="fname"><br>
-          <label for="email">Your E-mail:</label>
-          <input type="text" id="email" name="email"><br>
-          <label for="message">Your Text:</label>
-          <input type="text" id="message" name="message"><br>
-          <button type="button" id="index_button">submit</button>
-        </form>
-      </section>
-      <section data-index="2" data-menuname="follow" class="index_follow" id="index_follow">
-        <button class="collapse" id="button_follow">--</button>
-        <div class="actual-content">
-          <h3 id="follow_head">You like this content? Follow me:</h3>
-          <div class="index_social">
-            <a href="#" class="social_icon"><img src="img/facebook.svg" alt="fb_logo"></a>
-            <a href="#" class="social_icon"><img src="img/twitter.svg" alt="twitter_logo"></a>
-            <a href="#" class="social_icon"><img src="img/linkedin.svg" alt="linkedin_logo"></a>
-          </div>
+      </div>
+    </section>
+    <section data-index="1" data-menuname="contact" class="form" id="index_form">
+      <button class="collapse">--</button>
+      <form class="actual-content">
+        <h3 id="form_title">Do you have any quesitons? <br> Don't hesitate to contact me!</h3>
+        <label for="fname">Your name:</label>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="email">Your E-mail:</label>
+        <input type="text" id="email" name="email"><br>
+        <label for="message">Your Text:</label>
+        <input type="text" id="message" name="message"><br>
+        <button type="button" id="index_button">submit</button>
+      </form>
+    </section>
+    <section data-index="2" data-menuname="follow" class="index_follow" id="index_follow">
+      <button class="collapse" id="button_follow">--</button>
+      <div class="actual-content">
+        <h3 id="follow_head">You like this content? Follow me:</h3>
+        <div class="index_social">
+          <a href="#" class="social_icon"><img src="img/facebook.svg" alt="fb_logo"></a>
+          <a href="#" class="social_icon"><img src="img/twitter.svg" alt="twitter_logo"></a>
+          <a href="#" class="social_icon"><img src="img/linkedin.svg" alt="linkedin_logo"></a>
         </div>
-       </section>
-       <!-- comment it out to verify if it works with a  -->
-       <!-- <section data-index="4" data-menuname="new Section" class="index_follow" id="newSec">
+      </div>
+    </section>
+    <!-- comment it out to verify if it works with a  -->
+    <!-- <section data-index="4" data-menuname="new Section" class="index_follow" id="newSec">
          <p>hey hey</p>
        </section> -->
-      <footer class="footer">
-        <div id="go-top">
-          <a href="#">"go to the top"</a>
-        </div>
+    <footer class="footer">
+      <div id="#footer-structure">
+        <a id="go-top" href="#">back to the top</a>
         <p>Udacity's <u>Front End Web Developer</u> Nanodegree Program - Project 2</p>
         <p id="date">
-          <em>December 20,2020</em>
+          <em>January 10,2021</em>
         </p>
-      </footer>
-    </div>
-    <script src="js/app.js"></script>
-  </body>
+        <a href="designsystem.html">design system</a>
+      </div>
+    </footer>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+
 </html>

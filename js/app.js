@@ -1,11 +1,8 @@
 // **GLOBAL CONST DEFINITION:**
-const navbar = document.getElementById("navbar_content");
-const navID = document.getElementById("nav");
-const secs = document.querySelectorAll("section");
+const navbar = document.getElementById('navbar_content');
+const navID = document.getElementById('nav');
+const secs = document.querySelectorAll('section');
 
-// consts for the bar animation:
-const active2 = document.querySelector(".active2");
-const colors = ["#FDF0E3", "#EBF4EC", "#F5F7F9"]; // orange, green, lightgrey
 
 // **DYNAMIC NAVIGATION**
 secs.forEach((section) => {
@@ -17,13 +14,13 @@ secs.forEach((section) => {
 
 // **MARK ITEMS AS ACTIVE IF YOU CLICK ON THEM**
 //consts for active clicked items
-const navbarItems = navbar.querySelectorAll("li");
-const alreadyActive = document.getElementsByClassName("activebox");
+const navbarItems = navbar.querySelectorAll('li');
+const alreadyActive = document.getElementsByClassName('activebox');
 
 navbarItems.forEach(item => {
   item.addEventListener('click', () => {
-    alreadyActive[0].classList.toggle("activebox");
-    item.classList.add("activebox");
+    alreadyActive[0].classList.toggle('activebox');
+    item.classList.add('activebox');
   });
 });
 
@@ -36,7 +33,7 @@ navLinks.forEach(link => {
   link.addEventListener('click', (f) => {
     f.preventDefault();
     let scrollGetTo =
-      document.querySelector(f.currentTarget.hash); // this was needed, since the "this" property does not work with arrow functions
+      document.querySelector(f.currentTarget.hash); // this was needed, since the 'this' property does not work with arrow functions
     scrollGetTo.scrollIntoView({
       behavior: 'smooth'
     });
@@ -44,111 +41,114 @@ navLinks.forEach(link => {
 });
 
 // ** ACTIVE STATES FOR BAR AND SECS IF SEC IS IN VIEWPORT
+// consts for the bar animation:
+const colors = ['#FDF0E3', '#EBF4EC', '#F5F7F9']; // orange, green, lightgrey
+
+// add a class to a particular section
+const sectionViewed = document.getElementsByClassName('active-class');
+
+function activeSection(sec) {
+  sectionViewed[0].classList.toggle('active-class');
+  sec.classList.add('active-class');
+};
+
+// function to detect intersection observer
 function detectGo() {
+  // define the parameters for intersection: section viewed if 50% is in viewport
   const detectCustom = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.5
+    threshold: 0.7
   };
-
-  // create an intersection observe which observes if section is in viewport
-  let observer = new IntersectionObserver(detectNav, detectCustom);
-
+  //function to call if intersection meets conditions
   function detectNav(items) {
     items.forEach(item => {
       const sectionClass = item.target.classList[0];
       const corrAnchor = document.querySelector(`[data-sectionclass = ${sectionClass}]`); //detects which one is the corrisponding anchor
       const colorsIndex = item.target.getAttribute('data-index'); //used for giving the div the colors of the section
-      const position = corrAnchor.getBoundingClientRect();
-      const aim = {
-        x: position.x,
-        y: position.y,
-        height: position.height,
-        width: position.width,
-        top: position.top,
-        left: position.left
-      };
-      console.log(aim);
       if (item.isIntersecting) {
-        active2.style.setProperty('left', `${aim.left}px`);
-        active2.style.setProperty('top', `${aim.top}px`);
-        active2.style.setProperty('width', `${aim.width}px`);
-        active2.style.setProperty('height', `${aim.height}px`);
-        active2.style.setProperty('x', `${aim.x}px`);
-        active2.style.setProperty('y', `${aim.y}px`);
-        active2.style.setProperty('background', colors[colorsIndex]);
-        console.log(sectionClass);
+        const previousActive = navbar.querySelectorAll('h4');
+        previousActive.forEach(head => {
+          head.style.setProperty('background-color', 'white')
+        });
+        const anchorHead = corrAnchor.querySelector('h4');
+        anchorHead.style.setProperty('background', colors[colorsIndex]);
         const elmn = document.querySelector(`.${sectionClass}`);
         activeSection(elmn);
-        const secPosition = elmn.getBoundingClientRect();
-        console.log(secPosition);
+        // uncomment following to see section position:
+        // const secPosition = elmn.getBoundingClientRect();
+        // console.log(secPosition);
       };
     });
   };
 
+  // create an intersection observe which observes if section is in viewport
+  let observer = new IntersectionObserver(detectNav, detectCustom);
+
+  //observes each sections with section observer
   secs.forEach(sec => {
     observer.observe(sec);
   });
 
-  // detect if a section is active in viewport
-  const sectionViewed = document.getElementsByClassName("active-class");
-
-  function activeSection(sec) {
-    sectionViewed[0].classList.toggle("active-class");
-    sec.classList.add("active-class");
-  };
 };
+
 detectGo();
 
 // ** MAKE SECTIONS COLLAPSIBLE
 secs.forEach((section) => {
-  const collApse = section.querySelector(".collapse");
-  console.log(collApse);
+  const collApse = section.querySelector('.collapse');
   collApse.addEventListener('click', () => {
-    if (collApse.innerHTML === "++") {
-      collApse.innerHTML = "--"
-    } else if (collApse.innerHTML === "--") {
-      collApse.innerHTML = "++"
+    if (collApse.innerHTML === '++') {
+      collApse.innerHTML = '--'
+    } else if (collApse.innerHTML === '--') {
+      collApse.innerHTML = '++'
     }
-    // console.log(collText);
-    // collText = "";
-    subSection = section.querySelector(".actual-content");
-    console.log(subSection);
-    subSection.classList.toggle("collapsed");
+    subSection = section.querySelector('.actual-content');
+    subSection.classList.toggle('collapsed');
   });
 });
 
+// hide two posts in responsive mode
+const postButton = document.getElementById('button-posts');
+postButton.addEventListener('click', () => {
+  if (postButton.innerHTML === 'more') {
+    postButton.innerHTML = 'less'
+  } else if (postButton.innerHTML === 'less') {
+    postButton.innerHTML = 'more'
+  }
+  collPosts = secs[0].querySelectorAll('div[data-collapse = "killme"]');
+  collPosts.forEach(post => {post.classList.toggle("collapsible-post")});// collPost.classList.toggle('collapsed');
+});
+
 // ** CREATES A BUTTON TO GO UP TO PAGE TOP
-const topBut = document.getElementById("go-top");
+const topBut = document.getElementById('go-top');
 window.onscroll = function() {
   if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-    topBut.style = "display: block;";
-  } else {
-    topBut.style = "display: none;";
+    topBut.style = 'display: inline-block;';
   }
 };
 
 
 //** ADD AN EVENT WHICH DETECTS IF USER IS SCROLLING
-let scrollTimer = "";
+let scrollTimer = '';
+
+function changeStyle() {
+  navID.style = '';
+};
 
 function changeBarBe() {
   document.addEventListener('scroll', () => {
     clearTimeout(scrollTimer);
-    navID.style = "position: sticky; top: 0px;";
+    navID.style = 'position: sticky; top: 0px;';
     scrollTimer = setTimeout(changeStyle, 1000);
   });
 };
 
 document.addEventListener('mousemove', (event) => {
   if (event.pageY > 75) {
-    navID.style = "position: sticky; top: 0px;";
+    navID.style = 'position: sticky; top: 0px;';
   }
 });
 
-function changeStyle() {
-  navID.style = "";
-  active2.style = ""; // this is something I need for later on, where I track active states of the thing
-};
 
 changeBarBe();
