@@ -25,7 +25,7 @@ updateNav();
 //consts for active clicked items
 const navbarItems = navbar.querySelectorAll('li');
 const alreadyActive = document.getElementsByClassName('activebox');
-
+// add a black border to the item clicked 
 navbarItems.forEach(item => {
   item.addEventListener('click', () => {
     alreadyActive[0].classList.toggle('activebox');
